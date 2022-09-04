@@ -17,10 +17,10 @@ assemble: main.s sum1.s sum2.s main.S sum1.S sum2.S
 	gcc -o $@ -c $<
 
 .c.s:
-	gcc -S -masm=intel $<
+	gcc -S $<
 
 .c.S:
-	gcc -c -g -Wa,-adlhn -masm=intel $< > $@
+	gcc -c -g -Wa,-adlhn $< > $@
 
 clean:
 	rm -f *.s *.o demo main *.S

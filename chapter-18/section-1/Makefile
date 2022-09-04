@@ -1,7 +1,7 @@
 all: crt-test.s
 
 .c.s:
-	gcc -S $<
+	gcc -S -O0 $<
 
 clean:
 	rm -f *.s
